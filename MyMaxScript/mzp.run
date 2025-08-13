@@ -1,0 +1,16 @@
+name "MaxCheckScript"
+description "Installs MaxCheckScript on your system"
+version 1.0
+
+treeCopy "MaxCheckScript" to "$userScripts" 
+copy "InstallerMacro.mcr" to "$userScripts\MaxCheckScript\"
+copy "MaxCheckScript_16a.bmp" to "$userIcons"
+copy "MaxCheckScript_16i.bmp" to "$userIcons"
+copy "MaxCheckScript_24a.bmp" to "$userIcons"
+copy "MaxCheckScript_24i.bmp" to "$userIcons"
+
+
+drop "$userScripts\MaxCheckScript\InstallerMacro.mcr"
+run "$userScripts\MaxCheckScript\InstallerMacro.mcr"
+
+clear temp on MAX exit
